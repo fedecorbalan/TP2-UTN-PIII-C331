@@ -30,6 +30,21 @@ try {
 }
 };
 
+const updateArtist = async (req, res) => {
+    const { id } = req.params;
+    const { name, surname } = req.body;
+    try {
+    const artist = await Artist.findByPk(id);
+    if (!artist) return res.status(404).json({ error: 'Artista no encontrado' });
+
+    await artist.update({ name, surname });
+    res.json(artist);
+    } catch (error) {
+    res.status(500).json({ error: 'Error al actualizar el artista' });
+    }
+};
+
+
 const deleteArtist = async (req, res) => {
 const { id } = req.params;
 try {
@@ -41,4 +56,4 @@ try {
 }
 };
 
-module.exports = { getAllArtists, createArtist, getArtistById, deleteArtist };
+module.exports = { getAllArtists, createArtist, getArtistById, updateArtist, deleteArtist};
