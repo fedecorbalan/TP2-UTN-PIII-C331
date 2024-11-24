@@ -9,4 +9,7 @@ const Song = sequelize.define('Song', {
     duration: { type: DataTypes.INTEGER, allowNull: false } // Duración en segundos
 });
 
+Artist.hasMany(Song, { foreignKey: 'artistId', onDelete: 'CASCADE' });
+Song.belongsTo(Artist, { foreignKey: 'artistId' });
+
 module.exports = Song;
