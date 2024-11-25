@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "De los pagos del tiempo",
+        "genre": "Heavy Metal",
+        "status": "active",
+        "createdAt": "2024-11-25T00:00:00.000Z",
+        "updatedAt": "2024-11-25T19:49:55.000Z",
+        "artistId": 1
+    },
+    {
+        "id": 2,
+        "title": "El Pibe Tigre",
+        "genre": "Heavy Metal",
+        "status": "active",
+        "createdAt": "2024-11-25T19:54:12.000Z",
+        "updatedAt": "2024-11-25T19:54:12.000Z",
+        "artistId": 1
+    },
+    {
+        "id": 3,
+        "title": "Cute Thing",
+        "genre": "Indie Rock",
+        "status": "active",
+        "createdAt": "2024-11-25T20:47:04.000Z",
+        "updatedAt": "2024-11-25T20:47:04.000Z",
+        "artistId": 2
+    },
+    {
+        "id": 4,
+        "title": "Humble",
+        "genre": "Hip Hop",
+        "status": "active",
+        "createdAt": "2024-11-25T20:48:03.000Z",
+        "updatedAt": "2024-11-25T20:48:03.000Z",
+        "artistId": 3
+    },
+    {
+        "id": 5,
+        "title": "King Kunta",
+        "genre": "Hip Hop",
+        "status": "active",
+        "createdAt": "2024-11-25T20:48:16.000Z",
+        "updatedAt": "2024-11-25T20:48:16.000Z",
+        "artistId": 3
+    },
+    {
+        "id": 6,
+        "title": "Jungle Tarzan",
+        "genre": "Rock",
+        "status": "inactive",
+        "createdAt": "2024-11-25T20:51:32.000Z",
+        "updatedAt": "2024-11-25T20:51:32.000Z",
+        "artistId": 4
+    },
+    {
+        "id": 7,
+        "title": "The Eraser",
+        "genre": "Electronic",
+        "status": "active",
+        "createdAt": "2024-11-25T20:54:58.000Z",
+        "updatedAt": "2024-11-25T20:54:58.000Z",
+        "artistId": 7
+    },
+    {
+        "id": 8,
+        "title": "Black Swan",
+        "genre": "Electronic",
+        "status": "active",
+        "createdAt": "2024-11-25T20:55:13.000Z",
+        "updatedAt": "2024-11-25T20:55:13.000Z",
+        "artistId": 7
+    },
+    {
+        "id": 9,
+        "title": "Fearless",
+        "genre": "Psych Rock",
+        "status": "active",
+        "createdAt": "2024-11-25T20:55:39.000Z",
+        "updatedAt": "2024-11-25T20:55:39.000Z",
+        "artistId": 6
+    },
+    {
+        "id": 10,
+        "title": "Wish You Were Here",
+        "genre": "Psych Rock",
+        "status": "active",
+        "createdAt": "2024-11-25T20:55:55.000Z",
+        "updatedAt": "2024-11-25T20:55:55.000Z",
+        "artistId": 6
+    },
+    {
+        "id": 11,
+        "title": "Imagine",
+        "genre": "Pop",
+        "status": "active",
+        "createdAt": "2024-11-25T21:00:44.000Z",
+        "updatedAt": "2024-11-25T21:00:44.000Z",
+        "artistId": 8
+    },
+    {
+        "id": 12,
+        "title": "Summertime Sadness",
+        "genre": "Pop",
+        "status": "inactive",
+        "createdAt": "2024-11-25T21:02:03.000Z",
+        "updatedAt": "2024-11-25T21:06:32.000Z",
+        "artistId": 5
+    }
+]
