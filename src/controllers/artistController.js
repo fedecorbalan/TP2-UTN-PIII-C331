@@ -1,44 +1,47 @@
-const { Artist } = require('../models');
+const Artist = require('../models/Artist');
 
-const getAllArtists = async (req, res) => {
-try {
-    const artists = await Artist.findAll();
-    res.json(artists);
-} catch (error) {
-    res.status(500).json({ error: 'Error al obtener los artistas' });
-}
+// Crear un autor
+exports.createArtist = async (req, res) => {
+    try {
+        const artist = await Artist.create(req.body);
+        res.status(201).json(artist);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 };
 
-const createArtist = async (req, res) => {
-const { name, surname } = req.body;
-try {
-    const newArtist = await Artist.create({ name, surname });
-    res.status(201).json(newArtist);
-} catch (error) {
-    res.status(500).json({ error: 'Error al crear el artista' });
-}
+// Leer todos los autores
+exports.getAllArtists = async (req, res) => {
+    try {
+        const artists = await Artist.findAll();
+        res.status(200).json(artists);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 };
 
-const getArtistById = async (req, res) => {
-const { id } = req.params;
-try {
-    const artist = await Artist.findByPk(id);
-    if (!artist) return res.status(404).json({ error: 'Artista no encontrado' });
-    res.json(artist);
-} catch (error) {
-    res.status(500).json({ error: 'Error al obtener el artista' });
-}
+// Leer un autor por ID
+exports.getArtistById = async (req, res) => {
+    try {
+        const artist = await Artist.findByPk(req.params.id);
+        if (!artist) {
+            return res.status(404).json({ error: 'Autor no encontrado' });
+        }
+        res.status(200).json(artist);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 };
 
-const deleteArtist = async (req, res) => {
-const { id } = req.params;
-try {
-    const result = await Artist.destroy({ where: { id } });
-    if (result === 0) return res.status(404).json({ error: 'Artista no encontrado' });
-    res.json({ message: 'Artista eliminado correctamente' });
-} catch (error) {
-    res.status(500).json({ error: 'Error al eliminar el artista' });
-}
+// Eliminar un autor por ID
+exports.deleteArtistById = async (req, res) => {
+    try {
+        const rowsDeleted = await Artist.destroy({ where: { id: req.params.id } });
+        if (!rowsDeleted) {
+            return res.status(404).json({ error: 'Autor no encontrado' });
+        }
+        res.status(204).send();
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 };
-
-module.exports = { getAllArtists, createArtist, getArtistById, deleteArtist};
