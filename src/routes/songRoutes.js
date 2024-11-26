@@ -18,7 +18,6 @@ router.get('/songs', async (req, res) => {
         if (genre) whereConditions.genre = genre;
         if (status) whereConditions.status = status;
 
-        // Aquí iría tu lógica de consulta a la base de datos con Sequelize, por ejemplo
         const songs = await Song.findAndCountAll({
             where: whereConditions,
             order: [['createdAt', sort.toUpperCase() === 'DESC' ? 'DESC' : 'ASC']],
