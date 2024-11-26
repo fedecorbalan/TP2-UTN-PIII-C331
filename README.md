@@ -186,6 +186,15 @@ GET http://localhost:3000/songs/songs?page=1&limit=5&sort=DESC&genre=&status=ina
 
 - Puedes modificar el puerto del servidor o la configuración de la base de datos según sea necesario.
 
+- En el caso de tener conflicto con los modulos de node, eliminar la carpeta node_modules y ejecutar los siguientes comandos:
+  ```bash
+  npm init -y
+
+  npm install express sequelize mysql2 dotenv body-parser cors
+   ```
+   y luego, ejecuta el node server.js
+
+
 # Autor #
 
 - Proyecto desarrollado por Federico Corbalán, ante cualquier duda o consulta, no dude en ponerse en contacto. 2024.
