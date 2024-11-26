@@ -4,8 +4,25 @@ const Song = require('../models/Song');
 
 const router = express.Router();
 
+/**
+ * Rutas para gestionar artistas (CRUD):
+ * 
+ * POST `/`: Crear una nueva cancion.
+ * GET `/`: Obtener la lista de todos los artistas.
+ * GET `/:id`: Obtener una cancion específica por su ID.
+ * GET `/songs?page=&limit=&sort=[ASC/DESC]&genre=&status=[active/inactive]`: Obtener una cancion específica por su ID.
+ * PUT '/:id' Actualiza una cancion especifica por su id en base a los parametros ingresados en el body.
+ * DELETE `/:id`: Eliminar una cancion específica por su ID.
+ */
+
 router.post('/', songController.createSong);
 router.get('/', songController.getAllSongs);
+
+// Ruta para obtener canciones con paginación, filtrado y ordenación
+// Esta ruta admite parámetros de consulta como 'page', 'limit', 'sort', 'genre', 'status'
+// 'page' define la página actual, 'limit' define cuántos resultados por página, 'sort' define el orden (ASC o DESC)
+// 'genre' y 'status' permiten filtrar canciones por género y estado
+
 router.get('/songs', async (req, res) => {
     try {
         console.log(req.query);

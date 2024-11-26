@@ -188,6 +188,6 @@ GET http://localhost:3000/songs/songs?page=1&limit=5&sort=DESC&genre=&status=ina
 
 # Autor #
 
-- Proyecto desarrollado por Federico Corbalán. 2024.
+- Proyecto desarrollado por Federico Corbalán, ante cualquier duda o consulta, no dude en ponerse en contacto. 2024.
 
 
