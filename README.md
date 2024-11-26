@@ -25,7 +25,8 @@ Este proyecto es una API construida con **Node.js**, **Express**, y **Sequelize*
 ## Instrucciones de ejecución.
 
 - Una vez creada la base de datos en el motor SQL, iniciar el servidor:
-   ```node src/server.
+   ```http
+   node src/server.
    ```
 
 
